@@ -1,0 +1,61 @@
+{
+	"name": "pixilang-highlight",
+	"displayName": "Pixilang highlight",
+	"description": "Syntax highlighting for Pixilang programming language.",
+	"author": "Seriy-MLGamer",
+	"publisher": "Seriy-MLGamer",
+	"license": "MIT license",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Seriy-MLGamer/Pixilang_highlight"
+	},
+	"keywords": [
+		"Pixilang",
+		"highlight",
+		"syntax",
+		"highlighting",
+		"lint",
+		"IntelliSence",
+		"outline"
+	],
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "pixilang",
+				"aliases": [
+					"Pixilang",
+					"PixiLang",
+					"Pixi",
+					"pixilang"
+				],
+				"extensions": [
+					".pixi"
+				],
+				"configuration": "./language_configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "pixilang",
+				"scopeName": "source.pixi",
+				"path": "./syntaxes/language.json"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Pixilang highlight settings",
+				"properties": {
+					
+				}
+			}
+		]
+	}
+}
