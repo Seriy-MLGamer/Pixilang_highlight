@@ -66,8 +66,69 @@
 			]
 		},
 		"punctuation": {
-			"name": "punctuation.separator.pixilang",
-			"match": "[.,:]"
+			"patterns": [
+				{
+					"name": "punctuation.separator.pixilang",
+					"match": "[.,:]"
+				},
+				{
+					"begin": "\\(",
+					"end": "\\(",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.section.expression.begin.pixilang"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.section.expression.end.pixilang"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"begin": "{",
+					"end": "}",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.section.block.begin.pixilang"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.section.block.end.pixilang"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"begin": "\\[",
+					"end": "\\]",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.section.array.begin.pixilang"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.section.array.end.pixilang"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				}
+			]
 		},
 		"keywords": {
 			"patterns": [
@@ -97,8 +158,9 @@
 			"patterns": [
 				{
 					"comment": "Function definition",
-					"match": "\\b(fn)\\s+([a-zA-Zа-яА-Я_][a-zA-Zа-яА-Я0-9_]*)\\s*(\\()(.*)(\\))",
-					"captures": {
+					"begin": "\\b(fn)\\s+([a-zA-Zа-яА-Я_][a-zA-Zа-яА-Я0-9_]*)\\s*(\\()",
+					"end": "\\)",
+					"beginCaptures": {
 						"1": {
 							"patterns": [
 								{
@@ -107,34 +169,35 @@
 							]
 						},
 						"2": {
-							"name": "entity.name.function.pixilang"
+							"name": "entity.name.function.definition.pixilang"
 						},
 						"3": {
-							"name": "punctuation.section.parameters.begin.pixilang"
-						},
-						"4": {
-							"patterns": [
-								{
-									"name": "punctuation.separator.parameter.pixilang",
-									"match": ","
-								},
-								{
-									"name": "variable.parameter.pixilang",
-									"match": "[$a-zA-Zа-яА-Я_][a-zA-Zа-яА-Я0-9_]*"
-								}
-							]
-						},
-						"5": {
-							"name": "punctuation.section.parameters.end.pixilang"
+							"name": "punctuation.section.parameters.definition.begin.pixilang"
 						}
-					}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.section.parameters.definition.end.pixilang"
+						}
+					},
+					"patterns": [
+						{
+							"name": "punctuation.separator.parameter.pixilang",
+							"match": ","
+						},
+						{
+							"name": "variable.parameter.pixilang",
+							"match": "[$a-zA-Zа-яА-Я_][a-zA-Zа-яА-Я0-9_]*"
+						}
+					]
 				},
 				{
 					"comment": "Function call",
-					"match": "([$a-zA-Zа-яА-Я_][a-zA-Zа-яА-Я0-9_]*)(\\[.+\\])?\\s*(\\()(.*)(\\))",
-					"captures": {
+					"begin": "([$a-zA-Zа-яА-Я_][a-zA-Zа-яА-Я0-9_]*)(\\[.+\\])?\\s*(\\()",
+					"end": "\\)",
+					"beginCaptures": {
 						"1": {
-							"name": "entity.name.function.pixilang"
+							"name": "entity.name.function.call.pixilang"
 						},
 						"2": {
 							"patterns": [
@@ -144,19 +207,19 @@
 							]
 						},
 						"3": {
-							"name": "punctuation.section.parameters.begin.pixilang"
-						},
-						"4": {
-							"patterns": [
-								{
-									"include": "$self"
-								}
-							]
-						},
-						"5": {
-							"name": "punctuation.section.parameters.end.pixilang"
+							"name": "punctuation.section.parameters.call.begin.pixilang"
 						}
-					}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.section.parameters.call.end.pixilang"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
 				}
 			]
 		},
