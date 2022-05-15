@@ -18,7 +18,7 @@
 		"IntelliSence",
 		"outline"
 	],
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.22.0"
 	},
@@ -39,22 +39,14 @@
 				"extensions": [
 					".pixi"
 				],
-				"configuration": "./language_configuration.json"
+				"configuration": "./src/config.json"
 			}
 		],
 		"grammars": [
 			{
 				"language": "pixilang",
 				"scopeName": "source.pixi",
-				"path": "./syntaxes/language.json"
-			}
-		],
-		"configuration": [
-			{
-				"title": "Pixilang highlight settings",
-				"properties": {
-					
-				}
+				"path": "./src/language.json"
 			}
 		]
 	}
