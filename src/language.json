@@ -32,17 +32,17 @@
 				{
 					"comment": "Integer number",
 					"name": "constant.numeric.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(([1-9]\\d*)|(0([xX](\\d|[a-fA-F])+|[bB][01]+)?))(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(([1-9]\\d*)|(0([xX](\\d|[a-fA-F])+|[bB][01]+)?))(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Float number",
 					"name": "constant.numeric.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])((\\d+\\.\\d+|\\d+\\.|\\.\\d+)([eE][+-]?\\d+)?|\\d+[eE][+-]?\\d+)[fF]?(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])((\\d+\\.\\d+|\\d+\\.|\\.\\d+)([eE][+-]?\\d+)?|\\d+[eE][+-]?\\d+)[fF]?(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Pixilang color",
 					"name": "constant.numeric.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])#(\\d|[a-fA-F]){0,6}(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])#(\\d|[a-fA-F]){0,6}(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				}
 			]
 		},
@@ -145,11 +145,11 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.pixilang",
-					"match": "[+\\-*/%<>^|&~=!]|(?<=^|[ !\"%-/:-@\\[-^`{-~])div(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "[+\\-*/%<>^|&~=!]|(?<=^|[\\0-\"%-/:-@\\[-^`{-~])div(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"name": "keyword.control.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(include|if|else|for|while|continue|break(2|3|4|all)?|go(to)?|ret|halt)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(include|if|else|for|while|continue|break(2|3|4|all)?|go(to)?|ret|halt)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				}
 			]
 		},
@@ -158,139 +158,139 @@
 				{
 					"comment": "Container types",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(INT(8|16|32|64)?|FLOAT(32|64)?|PIXEL)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(INT(8|16|32|64)?|FLOAT(32|64)?|PIXEL)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Container flags",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(CFLAG_INTERP|GL_MIN_LINEAR|GL_MAG_LINEAR|GL_NICEST|GL_NO_XREPEAT|GL_NO_YREPEAT|GL_NO_ALPHA)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(CFLAG_INTERP|GL_MIN_LINEAR|GL_MAG_LINEAR|GL_NICEST|GL_NO_XREPEAT|GL_NO_YREPEAT|GL_NO_ALPHA)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Container resizing flags",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(RESIZE_INTERP1|RESIZE_INTERP2|RESIZE_UNSIGNED_INTERP2|RESIZE_COLOR_INTERP1|RESIZE_COLOR_INTERP2)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(RESIZE_INTERP1|RESIZE_INTERP2|RESIZE_UNSIGNED_INTERP2|RESIZE_COLOR_INTERP1|RESIZE_COLOR_INTERP2)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Container copying flags",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(COPY_NO_AUTOROTATE|COPY_CLIPPING)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(COPY_NO_AUTOROTATE|COPY_CLIPPING)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "ZLib",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(Z_NO_COMPRESSION|Z_BEST_SPEED|Z_BEST_COMPRESSION|Z_DEFAULT_COMPRESSION)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(Z_NO_COMPRESSION|Z_BEST_SPEED|Z_BEST_COMPRESSION|Z_DEFAULT_COMPRESSION)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "File formats",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(FORMAT_RAW|FORMAT_WAVE|FORMAT_AIFF|FORMAT_OGG|FORMAT_MP3|FORMAT_FLAC|FORMAT_MIDI|FORMAT_SUNVOX|FORMAT_SUNVOXMODULE|FORMAT_XM|FORMAT_MOD|FORMAT_JPEG|FORMAT_PNG|FORMAT_GIF|FORMAT_AVI|FORMAT_MP4|FORMAT_ZIP|FORMAT_PIXICONTAINER)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(FORMAT_RAW|FORMAT_WAVE|FORMAT_AIFF|FORMAT_OGG|FORMAT_MP3|FORMAT_FLAC|FORMAT_MIDI|FORMAT_SUNVOX|FORMAT_SUNVOXMODULE|FORMAT_XM|FORMAT_MOD|FORMAT_JPEG|FORMAT_PNG|FORMAT_GIF|FORMAT_AVI|FORMAT_MP4|FORMAT_ZIP|FORMAT_PIXICONTAINER)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Load/Save options",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(LOAD_FIRST_FRAME|GIF_GRAYSCALE|GIF_DITHER|JPEG_H1V1|JPEG_H2V1|JPEG_H2V2|JPEG_TWOPASS)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(LOAD_FIRST_FRAME|GIF_GRAYSCALE|GIF_DITHER|JPEG_H1V1|JPEG_H2V1|JPEG_H2V2|JPEG_TWOPASS)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Colors",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(ORANGE|BLACK|WHITE|YELLOW|RED|GREEN|BLUE)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(ORANGE|BLACK|WHITE|YELLOW|RED|GREEN|BLUE)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Alignment",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(TOP|BOTTOM|LEFT|RIGHT)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(TOP|BOTTOM|LEFT|RIGHT)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Effects",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(EFF_NOISE|EFF_SPREAD_LEFT|EFF_SPREAD_RIGHT|EFF_SPREAD_UP|EFF_SPREAD_DOWN|EFF_HBLUR|EFF_VBLUR|EFF_COLOR)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(EFF_NOISE|EFF_SPREAD_LEFT|EFF_SPREAD_RIGHT|EFF_SPREAD_UP|EFF_SPREAD_DOWN|EFF_HBLUR|EFF_VBLUR|EFF_COLOR)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "OpenGL",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(GL_POINTS|GL_LINE_STRIP|GL_LINE_LOOP|GL_LINES|GL_TRIANGLE_STRIP|GL_TRIANGLE_FAN|GL_TRIANGLES|GL_ZERO|GL_ONE|GL_SRC_COLOR|GL_ONE_MINUS_SRC_COLOR|GL_DST_COLOR|GL_ONE_MINUS_DST_COLOR|GL_SRC_ALPHA|GL_ONE_MINUS_SRC_ALPHA|GL_DST_ALPHA|GL_ONE_MINUS_DST_ALPHA|GL_SRC_ALPHA_SATURATE|GL_BFB_IDENTITY_MATRIX|GL_MAX_TEXTURE_SIZE|GL_MAX_VERTEX_ATTRIBS|GL_MAX_VERTEX_UNIFORM_VECTORS|GL_MAX_VARYING_VECTORS|GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS|GL_MAX_TEXTURE_IMAGE_UNITS|GL_MAX_FRAGMENT_UNIFORM_VECTORS|GL_SHADER_SOLID|GL_SHADER_GRAD|GL_SHADER_TEX_ALPHA_SOLID|GL_SHADER_TEX_ALPHA_GRAD|GL_SHADER_TEX_RGB_SOLID|GL_SHADER_TEX_RGB_GRAD|GL_SCREEN|GL_ZBUF)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(GL_POINTS|GL_LINE_STRIP|GL_LINE_LOOP|GL_LINES|GL_TRIANGLE_STRIP|GL_TRIANGLE_FAN|GL_TRIANGLES|GL_ZERO|GL_ONE|GL_SRC_COLOR|GL_ONE_MINUS_SRC_COLOR|GL_DST_COLOR|GL_ONE_MINUS_DST_COLOR|GL_SRC_ALPHA|GL_ONE_MINUS_SRC_ALPHA|GL_DST_ALPHA|GL_ONE_MINUS_DST_ALPHA|GL_SRC_ALPHA_SATURATE|GL_BFB_IDENTITY_MATRIX|GL_MAX_TEXTURE_SIZE|GL_MAX_VERTEX_ATTRIBS|GL_MAX_VERTEX_UNIFORM_VECTORS|GL_MAX_VARYING_VECTORS|GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS|GL_MAX_TEXTURE_IMAGE_UNITS|GL_MAX_FRAGMENT_UNIFORM_VECTORS|GL_SHADER_SOLID|GL_SHADER_GRAD|GL_SHADER_TEX_ALPHA_SOLID|GL_SHADER_TEX_ALPHA_GRAD|GL_SHADER_TEX_RGB_SOLID|GL_SHADER_TEX_RGB_GRAD|GL_SCREEN|GL_ZBUF)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Audio",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])AUDIO_FLAG_INTERP2(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])AUDIO_FLAG_INTERP2(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "MIDI",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(MIDI_PORT_READ|MIDI_PORT_WRITE)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(MIDI_PORT_READ|MIDI_PORT_WRITE)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Events",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(EVT|EVT_TYPE|EVT_FLAGS|EVT_TIME|EVT_X|EVT_Y|EVT_KEY|EVT_SCANCODE|EVT_PRESSURE|EVT_MOUSEBUTTONDOWN|EVT_MOUSEBUTTONUP|EVT_MOUSEMOVE|EVT_TOUCHBEGIN|EVT_TOUCHEND|EVT_TOUCHMOVE|EVT_BUTTONDOWN|EVT_BUTTONUP|EVT_SCREENRESIZE|EVT_QUIT|EVT_FLAG_SHIFT|EVT_FLAG_CTRL|EVT_FLAG_ALT|EVT_FLAG_MODE|EVT_FLAG_MODS|EVT_FLAG_DOUBLECLICK|KEY_MOUSE_LEFT|KEY_MOUSE_MIDDLE|KEY_MOUSE_RIGHT|KEY_MOUSE_SCROLLUP|KEY_MOUSE_SCROLLDOWN|KEY_BACKSPACE|KEY_TAB|KEY_ENTER|KEY_ESCAPE|KEY_SPACE|KEY_F1|KEY_F2|KEY_F3|KEY_F4|KEY_F5|KEY_F6|KEY_F7|KEY_F8|KEY_F9|KEY_F10|KEY_F11|KEY_F12|KEY_UP|KEY_DOWN|KEY_LEFT|KEY_RIGHT|KEY_INSERT|KEY_DELETE|KEY_HOME|KEY_END|KEY_PAGEUP|KEY_PAGEDOWN|KEY_CAPS|KEY_SHIFT|KEY_CTRL|KEY_ALT|KEY_MENU|KEY_UNKNOWN|QA_NONE|QA_CLOSE_VM)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(EVT|EVT_TYPE|EVT_FLAGS|EVT_TIME|EVT_X|EVT_Y|EVT_KEY|EVT_SCANCODE|EVT_PRESSURE|EVT_MOUSEBUTTONDOWN|EVT_MOUSEBUTTONUP|EVT_MOUSEMOVE|EVT_TOUCHBEGIN|EVT_TOUCHEND|EVT_TOUCHMOVE|EVT_BUTTONDOWN|EVT_BUTTONUP|EVT_SCREENRESIZE|EVT_QUIT|EVT_FLAG_SHIFT|EVT_FLAG_CTRL|EVT_FLAG_ALT|EVT_FLAG_MODE|EVT_FLAG_MODS|EVT_FLAG_DOUBLECLICK|KEY_MOUSE_LEFT|KEY_MOUSE_MIDDLE|KEY_MOUSE_RIGHT|KEY_MOUSE_SCROLLUP|KEY_MOUSE_SCROLLDOWN|KEY_BACKSPACE|KEY_TAB|KEY_ENTER|KEY_ESCAPE|KEY_SPACE|KEY_F1|KEY_F2|KEY_F3|KEY_F4|KEY_F5|KEY_F6|KEY_F7|KEY_F8|KEY_F9|KEY_F10|KEY_F11|KEY_F12|KEY_UP|KEY_DOWN|KEY_LEFT|KEY_RIGHT|KEY_INSERT|KEY_DELETE|KEY_HOME|KEY_END|KEY_PAGEUP|KEY_PAGEDOWN|KEY_CAPS|KEY_SHIFT|KEY_CTRL|KEY_ALT|KEY_MENU|KEY_UNKNOWN|QA_NONE|QA_CLOSE_VM)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Threads",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])THREAD_FLAG_AUTO_DESTROY(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])THREAD_FLAG_AUTO_DESTROY(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Mathematical constants",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(M_E|M_LOG2E|M_LOG10E|M_LN2|M_LN10|M_PI|M_2_SQRTPI|M_SQRT2|M_SQRT1_2)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(M_E|M_LOG2E|M_LOG10E|M_LN2|M_LN10|M_PI|M_2_SQRTPI|M_SQRT2|M_SQRT1_2)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Data processing operations",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(OP_MIN|OP_MAX|OP_MAXABS|OP_SUM|OP_LIMIT_TOP|OP_LIMIT_BOTTOM|OP_ABS|OP_SUB2|OP_COLOR_SUB2|OP_DIV2|OP_H_INTEGRAL|OP_V_INTEGRAL|OP_H_DERIVATIVE|OP_V_DERIVATIVE|OP_H_FLIP|OP_V_FLIP|OP_ADD|OP_SADD|OP_COLOR_ADD|OP_SUB|OP_SSUB|OP_COLOR_SUB|OP_MUL|OP_SMUL|OP_MUL_RSHIFT15|OP_COLOR_MUL|OP_DIV|OP_COLOR_DIV|OP_AND|OP_OR|OP_XOR|OP_LSHIFT|OP_RSHIFT|OP_EQUAL|OP_LESS|OP_GREATER|OP_COPY|OP_COPY_LESS|OP_COPY_GREATER|OP_BMUL|OP_EXCHANGE|OP_COMPARE|OP_MUL_DIV|OP_MUL_RSHIFT|OP_SIN|OP_SIN8|OP_RAND)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(OP_MIN|OP_MAX|OP_MAXABS|OP_SUM|OP_LIMIT_TOP|OP_LIMIT_BOTTOM|OP_ABS|OP_SUB2|OP_COLOR_SUB2|OP_DIV2|OP_H_INTEGRAL|OP_V_INTEGRAL|OP_H_DERIVATIVE|OP_V_DERIVATIVE|OP_H_FLIP|OP_V_FLIP|OP_ADD|OP_SADD|OP_COLOR_ADD|OP_SUB|OP_SSUB|OP_COLOR_SUB|OP_MUL|OP_SMUL|OP_MUL_RSHIFT15|OP_COLOR_MUL|OP_DIV|OP_COLOR_DIV|OP_AND|OP_OR|OP_XOR|OP_LSHIFT|OP_RSHIFT|OP_EQUAL|OP_LESS|OP_GREATER|OP_COPY|OP_COPY_LESS|OP_COPY_GREATER|OP_BMUL|OP_EXCHANGE|OP_COMPARE|OP_MUL_DIV|OP_MUL_RSHIFT|OP_SIN|OP_SIN8|OP_RAND)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Sampler",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(SMP_INFO_SIZE|SMP_DEST|SMP_DEST_OFF|SMP_DEST_LEN|SMP_SRC|SMP_SRC_OFF_H|SMP_SRC_OFF_L|SMP_SRC_SIZE|SMP_LOOP|SMP_LOOP_LEN|SMP_VOL1|SMP_VOL2|SMP_DELTA|SMP_FLAGS|SMP_FLAG_INTERP2|SMP_FLAG_INTERP4|SMP_FLAG_PINGPONG|SMP_FLAG_REVERSE)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(SMP_INFO_SIZE|SMP_DEST|SMP_DEST_OFF|SMP_DEST_LEN|SMP_SRC|SMP_SRC_OFF_H|SMP_SRC_OFF_L|SMP_SRC_SIZE|SMP_LOOP|SMP_LOOP_LEN|SMP_VOL1|SMP_VOL2|SMP_DELTA|SMP_FLAGS|SMP_FLAG_INTERP2|SMP_FLAG_INTERP4|SMP_FLAG_PINGPONG|SMP_FLAG_REVERSE)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Convolution filter flags",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(CONV_FILTER_COLOR|CONV_FILTER_BORDER_EXTEND|CONV_FILTER_BORDER_SKIP|CONV_FILTER_UNSIGNED)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(CONV_FILTER_COLOR|CONV_FILTER_BORDER_EXTEND|CONV_FILTER_BORDER_SKIP|CONV_FILTER_UNSIGNED)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "File dialog options",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])FDIALOG_FLAG_LOAD(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])FDIALOG_FLAG_LOAD(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Native code",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(CCONV_DEFAULT|CCONV_CDECL|CCONV_STDCALL|CCONV_UNIX_AMD64|CCONV_WIN64)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(CCONV_DEFAULT|CCONV_CDECL|CCONV_STDCALL|CCONV_UNIX_AMD64|CCONV_WIN64)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "POSIX",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(FOPEN_MAX|SEEK_CUR|SEEK_END|SEEK_SET|EOF|STDIN|STDOUT|STDERR)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(FOPEN_MAX|SEEK_CUR|SEEK_END|SEEK_SET|EOF|STDIN|STDOUT|STDERR)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Pixilang info flags",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(PIXINFO_MULTITOUCH|PIXINFO_TOUCHCONTROL|PIXINFO_NOWINDOW|PIXINFO_MIDIIN|PIXINFO_MIDIOUT)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(PIXINFO_MULTITOUCH|PIXINFO_TOUCHCONTROL|PIXINFO_NOWINDOW|PIXINFO_MIDIIN|PIXINFO_MIDIOUT)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Misc",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(PIXILANG_VERSION|OS_NAME|ARCH_NAME|LANG_NAME|CURRENT_PATH|USER_PATH|TEMP_PATH|OPENGL|INT_SIZE|FLOAT_SIZE|INT_MAX|COLORBITS)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(PIXILANG_VERSION|OS_NAME|ARCH_NAME|LANG_NAME|CURRENT_PATH|USER_PATH|TEMP_PATH|OPENGL|INT_SIZE|FLOAT_SIZE|INT_MAX|COLORBITS)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				},
 				{
 					"comment": "Built-in global variables",
 					"name": "constant.language.pixilang",
-					"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(WINDOW_XSIZE|WINDOW_YSIZE|WINDOW_ZSIZE|WINDOW_SAFE_AREA_X|WINDOW_SAFE_AREA_Y|WINDOW_SAFE_AREA_W|WINDOW_SAFE_AREA_H|FPS|PPI|UI_SCALE|UI_FONT_SCALE|PIXILANG_INFO)(?=$|[ !\"%-/:-@\\[-^`{-~])"
+					"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(WINDOW_XSIZE|WINDOW_YSIZE|WINDOW_ZSIZE|WINDOW_SAFE_AREA_X|WINDOW_SAFE_AREA_Y|WINDOW_SAFE_AREA_W|WINDOW_SAFE_AREA_H|FPS|PPI|UI_SCALE|UI_FONT_SCALE|PIXILANG_INFO)(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 				}
 			]
 		},
 		"variables": {
 			"name": "variable.pixilang",
-			"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])[^ -#%-@\\[-^`{-~][^ !\"%-/:-@\\[-^`{-~]*(?=$|[ !\"%-/:-@\\[-^`{-~])"
+			"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])[^\\0-#%-@\\[-^`{-~][^\\0-\"%-/:-@\\[-^`{-~]*(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 		},
 		"functions": {
 			"patterns": [
 				{
 					"comment": "Function definition",
-					"begin": "(?<=^|[ !\"%-/:-@\\[-^`{-~])(fn)\\s+([^ -@\\[-^`{-~][^ !\"%-/:-@\\[-^`{-~]*)\\s*(\\()",
+					"begin": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])(fn)\\s+([^\\0-@\\[-^`{-~][^\\0-\"%-/:-@\\[-^`{-~]*)\\s*(\\()",
 					"end": "\\)",
 					"beginCaptures": {
 						"1": {
@@ -322,13 +322,13 @@
 						},
 						{
 							"name": "variable.parameter.pixilang",
-							"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])[^ -#%-@\\[-^`{-~][^ !\"%-/:-@\\[-^`{-~]*(?=$|[ !\"%-/:-@\\[-^`{-~])"
+							"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])[^\\0-#%-@\\[-^`{-~][^\\0-\"%-/:-@\\[-^`{-~]*(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 						}
 					]
 				},
 				{
 					"comment": "Function call",
-					"begin": "((?<=^|[ !\"%-/:-@\\[-^`{-~])[^ -#%-@\\[-^`{-~][^ !\"%-/:-@\\[-^`{-~]*(?=$|[ !\"%-/:-@\\[-^`{-~]))\\s*(\\[.*\\])?\\s*(\\()",
+					"begin": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])([^\\0-#%-@\\[-^`{-~][^\\0-\"%-/:-@\\[-^`{-~]*)(\\s*\\[.*\\])?\\s*(\\()",
 					"end": "\\)",
 					"beginCaptures": {
 						"1": {
@@ -360,7 +360,7 @@
 		},
 		"function-keyword": {
 			"name": "storage.type.function.pixilang",
-			"match": "(?<=^|[ !\"%-/:-@\\[-^`{-~])fn(?=$|[ !\"%-/:-@\\[-^`{-~])"
+			"match": "(?<=^|[\\0-\"%-/:-@\\[-^`{-~])fn(?=$|[\\0-\"%-/:-@\\[-^`{-~])"
 		}
 	},
 	"patterns": [
